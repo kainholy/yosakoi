@@ -1,0 +1,73 @@
+@use "../../globals.scss" as *;
+
+.container {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+  padding-left: min(5.5vw, 8rem);
+  padding-right: min(5.5vw, 8rem);
+  font-family: $noto;
+}
+
+.titlearea {
+  margin: 0 30px;
+  text-align: left;
+  display: inline-block;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  min-height: 6rem;
+  display: block;
+  width: 100%;
+  white-space: pre;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.redLine,
+.transparentLine {
+  height: 6px;
+  background-color: transparent;
+}
+
+.redLine {
+  background-color: $red;
+  transform-origin: left;
+  animation: expandLine 1s forwards;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $wh;
+  border-radius: 10px;
+  max-width: 60rem;
+}
+
+.award {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 1rem;
+  border-bottom: 1px solid #f2f4f5;
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  flex: 1;
+  padding: 20px;
+}

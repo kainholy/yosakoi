@@ -1,0 +1,54 @@
+@use "../globals.scss" as *;
+
+$img-height-desktop: 400px;
+$img-height-mobile: 200px;
+$img-width: 100%;
+$img-object-fit: cover;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: $img-height-desktop;
+
+  @media screen and (max-width: 768px) {
+    height: $img-height-mobile;
+  }
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img10 {
+  position: absolute;
+  width: $img-width;
+  height: 100%;
+  object-fit: $img-object-fit;
+}
+
+.img1 {
+  object-position: 50% 70%;
+}
+.img2 {
+  object-position: 50% 25%;
+}
+.img3,
+.img4,
+.img5 {
+  object-position: center;
+}
+
+.img10 {
+  object-position: bottom;
+}
+
+@media screen and (max-width: 768px) {
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5 {
+    height: 100%;
+  }
+}
